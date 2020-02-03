@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 from akad.ttypes import ApplicationType
 import re
-Sky_Header = ApplicationType._VALUES_TO_NAMES[368]
-Sky_Version = '2.1.5'
+
 class Config(object):
-    LINE_HOST_DOMAIN            = 'https://legy-jp-short.line.naver.jp'
+    LINE_HOST_DOMAIN            = 'https://gd2.line.naver.jp'
     LINE_OBS_DOMAIN             = 'https://obs-sg.line-apps.com'
     LINE_TIMELINE_API           = 'https://gd2.line.naver.jp/mh/api'
     LINE_TIMELINE_MH            = 'https://gd2.line.naver.jp/mh'
@@ -30,14 +29,32 @@ class Config(object):
         'LINE_SERVICES': '1459630796'
     }
 
-    APP_TYPE    = Sky_Header
-    APP_VER     = Sky_Version
+    APP_VERSION = {
+        'ANDROID': '8.14.2',
+        'IOS': '8.14.2',
+        'ANDROIDLITE': '2.1.0',
+        'BIZANDROID': '1.7.2',
+        'BIZIOS': '1.7.5',
+        'BIZWEB': '1.0.22',
+        'DESKTOPWIN': '5.9.0',
+        'DESKTOPMAC': '5.9.0',
+        'IOSIPAD': '8.14.2',
+        'CHROMEOS': '2.1.5',
+        'WIN10': '5.5.5',
+        'DEFAULT': '8.11.0'
+    }
+
+    APP_TYPE    = 'CHROMEOS'
+    APP_VER     = APP_VERSION[APP_TYPE] if APP_TYPE in APP_VERSION else APP_VERSION['DEFAULT']
     CARRIER     = '51089, 1-0'
-    SYSTEM_NAME = 'B.O.G'
-    SYSTEM_VER  = '12.0.0'
+    SYSTEM_NAME = 'InexBots'
+    SYSTEM_VER  = '11.2.5'
     IP_ADDR     = '8.8.8.8'
     EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 
-    def __init__(self):
+    def __init__(self, appType=None):
+        if appType:
+            self.APP_TYPE = appType
+            self.APP_VER = self.APP_VERSION[self.APP_TYPE] if self.APP_TYPE in self.APP_VERSION else self.APP_VERSION['DEFAULT']
         self.APP_NAME = '%s\t%s\t%s\t%s' % (self.APP_TYPE, self.APP_VER, self.SYSTEM_NAME, self.SYSTEM_VER)
         self.USER_AGENT = 'Line/%s' % self.APP_VER
